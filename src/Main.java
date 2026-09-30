@@ -30,9 +30,9 @@ public class Main {
         int population = 12000000;
         int birthRate = 17 * population / 1000;
         int mortalityRate = 8 * population / 1000;
-        for (int i = 1; i <= 10; i++) {
+        for (int year = 1; year <= 10; year++) {
             population = population + birthRate - mortalityRate;
-            System.out.println("Год " + i + ": численность населения составляет " + population + " человек.");
+            System.out.println("Год " + year + ": численность населения составляет " + population + " человек.");
         }
 
         //Задача 4
@@ -80,7 +80,8 @@ public class Main {
 
         //Задача 8
         int thisYear = 2026;
-        for (int cometYears = 0; cometYears < thisYear + 100; cometYears+=79) {
+        int cometIncrement = 79;
+        for (int cometYears = 0; cometYears < thisYear + 100; cometYears+=cometIncrement) {
             if (thisYear - 200 < cometYears) {
                 System.out.println(cometYears);
             }
